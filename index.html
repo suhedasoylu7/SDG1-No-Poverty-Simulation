@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SDG 1 - No Poverty</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Add this at the top inside <body> -->
+<nav id="navbar">
+  <ul>
+    <li><a href="#landing">Home</a></li>
+    <li><a href="#sdg-info">SDG Info</a></li>
+    <li><a href="#myths">Myths vs Reality</a></li>
+    <li><a href="#end">End</a></li>
+  </ul>
+</nav>
+
+<!-- Landing Page -->
+<section id="landing" class="section">
+  <div class="landing-content">
+    <img src="images/sdg1-logo.png" alt="SDG 1 Logo" id="sdgLogo">
+    <h1>Can You Survive The Month?</h1>
+    <p class="subtitle">An interactive experience about poverty and choices</p>
+    <p class="how-to-play">
+      Survive 30 days with limited income. Each choice affects your money, food, and stress.
+      There is no perfect answer — this reflects real-life poverty.
+    </p>
+    <button id="startBtn">Start Simulation</button>
+  </div>
+</section>
+
+<!-- SDG Info Section -->
+<section id="sdg-info" class="section">
+  <h2>What is SDG 1: No Poverty?</h2>
+  <div class="sdg-text">
+    <p>
+      Sustainable Development Goal 1 (SDG 1) aims to end poverty in all its forms everywhere.
+      Poverty is not only about low income, but also about limited access to basic needs
+      such as food, healthcare, education, housing, and social protection.
+    </p>
+    <p>
+      Many people experiencing poverty work hard every day, yet still struggle to survive
+      due to low wages, rising living costs, and unexpected expenses such as medical bills
+      or transportation. These challenges create a cycle that is difficult to escape.
+    </p>
+    <p>
+      This simulation helps users understand how daily decisions, even small ones,
+      can have long-term effects on financial stability, stress, and well-being.
+      It reflects the reality that there are often no perfect choices when resources are limited.
+    </p>
+  </div>
+
+  <!-- Carousel -->
+  <div id="carousel">
+    <button id="prevBtn">◀</button>
+    <img id="carouselImage" src="images/poverty1.jpg" alt="Poverty reality">
+    <button id="nextBtn">▶</button>
+  </div>
+  <p id="carouselCaption">Poverty affects access to food, housing, healthcare, and education.</p>
+</section>
+
+<!-- Myth vs Reality Section -->
+<section id="myths" class="section">
+  <h2>Myth vs Reality</h2>
+  
+  <div class="myth card">
+    <h3>MYTH</h3>
+    <p>Poor people are poor because they are lazy</p>
+    <button class="reveal">Reveal Reality</button>
+    <p class="reality hidden">
+      REALITY: Many people in poverty work long hours but earn wages that are not enough to cover basic needs.
+    </p>
+  </div>
+  
+  <div class="myth card">
+    <h3>MYTH</h3>
+    <p>If you work hard you will never be poor</p>
+    <button class="reveal">Reveal Reality</button>
+    <p class="reality hidden">
+      REALITY: Low wages, rising costs and lack of support systems keep many hardworking people in poverty.
+    </p>
+  </div>
+</section>
+
+<!-- End Section -->
+<section id="end" class="section">
+  <h2>"No poverty" starts with understanding</h2>
+  <p>Poverty is not a personal failure. It is a systemic issue that requires empathy, policy change and collective action.</p>
+  <p class="sdg-note">SDG 1: End poverty in all its forms everywhere</p>
+</section>
+
+<footer>
+  <p>Learn more: <a href="https://sdgs.un.org/goals/goal1" target="_blank">UN SDG 1</a> |   
+     Follow us: <a href="#">Facebook</a> | <a href="#">Instagram</a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

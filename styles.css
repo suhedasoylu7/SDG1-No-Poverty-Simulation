@@ -1,0 +1,466 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff0f0;
+  color: #660000;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =========================
+   SECTION BASE
+========================= */
+.section {
+  
+  padding: 60px 20px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.section>*{
+  position: relative;
+  z-index: 2;  
+} 
+
+.hidden {
+  display: none;
+}
+
+/* =========================
+   SDG LOGO
+========================= */
+#sdgLogo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  opacity: 1; /* make fully visible */
+  transform: translateY(0);
+  z-index: 2;
+}
+
+#landing.show-logo #sdgLogo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Landing background with overlay */
+#landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  
+  /* Background image */
+  background-image: url('images/landing-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Overlay for readability */
+#landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5); 
+  z-index: 0;
+  pointer-events: none; /*key fix*/
+}
+
+/* Text box */
+.landing-content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px 25px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+.landing-content p.how-to-play {
+  max-width: 500px;        
+  margin: 20px auto 0;     
+  text-align: center;      
+  line-height: 1.5;        
+  font-size: 1rem;         
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #d32f2f;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #c62828;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #b71c1c;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  color: #880e4f;
+}
+
+.how-to-play {
+  margin-top: 20px;
+  max-width: 500px;
+  font-size: 0.95rem;
+  color: #aa0000;
+}
+
+/* =========================
+   SDG EXPLANATION TEXT
+========================= */
+#sdg-info .sdg-text {
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+#sdg-info .sdg-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  padding: 10px 18px;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #e53935;
+  color: white;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.1s ease;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+button:hover {
+  background: #b71c1c;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* =========================
+   OPTION GROUPS
+========================= */
+.option-group {
+  margin: 20px 0;
+}
+
+.option-group p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* =========================
+   SIMULATION
+========================= */
+#simulation {
+  background: #ffe6e6;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.rules-note {
+  font-size: 0.85rem;
+  color: #880000;
+  margin-bottom: 20px;
+}
+
+#status-bar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  background: #ffcccc;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+#status-bar div {
+  font-size: 0.9rem;
+}
+
+#event-box {
+  background: #fff0f0;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+#choices {
+  margin-top: 20px;
+}
+
+.choice-feedback {
+  display: none;
+  margin-top: 10px;
+  color: #b71c1c;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   PROGRESS BARS
+========================= */
+.progress {
+  background: #ffcdd2;
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: #b71c1c;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+/* =========================
+   MYTH CARDS
+========================= */
+.card {
+  background: #ffe6e6;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.myth h3 {
+  color: #c62828;
+}
+
+.reality {
+  margin-top: 10px;
+  color: #b71c1c;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   OUTCOME SECTION CENTERED
+========================= */
+#outcome {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#outcome h2 {
+  margin-bottom: 15px;
+}
+
+#outcome p {
+  max-width: 500px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* =========================
+   END SECTION
+========================= */
+#end {
+  background: #ffebee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;       
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.sdg-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #c62828;
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+#carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+#carousel img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#carousel button {
+  background: #b71c1c;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#carouselCaption {
+  max-width: 500px;
+  font-size: 0.9rem;
+  color: #880000;
+  margin: 12px auto 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #880000;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #b71c1c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  #status-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #carousel img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 20px;
+  margin: 0;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #b71c1c;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #880000;
+}
+
+
+body {
+  padding-top: 60px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+  #navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+}
+
+.hidden { display: none; }
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,0.95);
+  z-index: 10;
+}
+
+body { padding-top: 60px; } 
+
+html {
+  scroll-behavior: smooth;
+}
+

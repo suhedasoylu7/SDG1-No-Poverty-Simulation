@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulation - SDG 1</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section id="setup" class="section">
+  <h2>Choose your situation</h2>
+  <div class="option-group">
+    <p>Monthly Income</p>
+    <button class="income" data-income="1200">RM 1,200</button>
+    <button class="income" data-income="1500">RM 1,500</button>
+  </div>
+  <div class="option-group">
+    <p>Family Size</p>
+    <button class="family" data-family="1">1 person</button>
+    <button class="family" data-family="3">3 people</button>
+    <button class="family" data-family="5">5 people</button>
+  </div>
+  <button id="beginSim" disabled>Begin Month</button>
+</section>
+
+<section id="simulation" class="section">
+
+  <div id="status-bar">
+    <div>Day: <span id="day">1</span></div>
+    <div>Money: RM <span id="money">0</span></div>
+    <div>Food: <span id="food">100</span></div>
+    <div>Stress: <span id="stress">0</span></div>
+  </div>
+
+  <div id="event-box">
+    <h3 id="event-title"></h3>
+    <p id="event-text"></p>
+    <div id="choices"></div>
+  </div>
+
+</section>
+<section id="outcome" class="section">
+  <h2 id="outcome-title"></h2>
+  <p id="outcome-text"></p>
+  <button id="backHomeBtn">Go Back Home</button>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
