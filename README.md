@@ -1,4 +1,4 @@
-The live website is here: https://github.com/suhedasoylu7/SDG1-No-Poverty-Simulation.git
+The live website is here: https://suhedasoylu7.github.io/SDG1-No-Poverty-Simulation/
 
 SDG 1 – No Poverty Interactive Website
 
@@ -62,3 +62,4 @@ Features
 - ChatGPT was used to assist with code troubleshooting, guidance on 
 
   interactive features, and logic implementation for the simulation.
+
